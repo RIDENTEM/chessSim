@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/dialogue.rpy", line 273: choice menuitem expects a non-empty block.
+    "Blue":
+           ^
+
+File "game/dialogue.rpy", line 288: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "[t]"
+         ^
+
+Ren'Py Version: Ren'Py 7.1.1.929
+Tue Nov 20 00:04:01 2018
