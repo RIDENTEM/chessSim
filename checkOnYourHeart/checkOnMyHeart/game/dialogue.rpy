@@ -303,6 +303,29 @@ label tKiss:
      t "Damn I'm flattered hahaa."
      l "Oh I see how it is, damn I'll make sure I get you two a room."
      k "Nice."
+     jump lGame
+label sKiss:
+    s "OOOOOOO shit! Now I'm REALLY blushing!"
+    t "Oh well."
+    l "Oh I see how it is, damn I'll make sure I get you two a room."
+    k "Nice."
+    jump lGame
+label kKiss:
+    k "Nice!"
+    s "Good for you two, well [t] at least we have each other."
+    t "Huh?"
+    s "Oblivious as usual."
+    t "Huh???"
+    l "Oh I see how it is, damn I'll make sure I get you two a room."
+    jump lGame
+label lKiss:
+    l "Well if you insist, pucker up!"
+    k "Nice."
+    s "Good for you two, well [t] at least we have each other."
+    t "Huh?"
+    s "Oblivious as usual."
+    t "Huh???"
+    jump lGame
 
 label lGame:
     y "I wasn't really expecting all this attention, do you have enough info now? Can we play [l]?"
@@ -311,6 +334,103 @@ label lGame:
     l "Cool, lets set things up then."
     $subprocess.Popen("C:\Users\RIDENTEM\Downloads\checkOnYourHeart\checkOnMyHeart\game\chess.exe")
 
+$game3Result = gamesWon.readline().rstrip()
+if(game3Result == "true"):
+    "*You notice that a lot of people have gathered around your game, and you confidently announce your win*"
+    y "Checkmate."
+    "*The crowd exclaims loudly and showers you with praise*"
+    t "Damn [l] you got BEAT HAHAAA!"
+    s "That was a close game, well done!"
+    k "Yeah seriously dude that was pretty great."
+    l "Ah damn, I lost *SIGH*."
+    "*[l] extends his hand out and you grab it and shake*"
+    y "Good game."
+    jump postGame3
+if(game3Result == "false"):
+    "*You finally notice the crowd of people surrounding you when they audibly sigh at the loss you received*"
+    l "Tsk, come on man, I just lost to myself."
+    y "You really think so?"
+    l "Yeah, even if you lose you still learn."
+    k "That was a good game to watch."
+    t "I thought you were gonna win for sure."
+    "*[l] extends his hand out and you grab it and shake*"
+    jump postGame3
     # This ends the game.
+
+label postGame3:
+
+y "Well after that I'm starving, who else is hungry?"
+"*Everyone murmurs in agreement"
+y "Let's go to the cafeteria then and get some food."
+"*You all head to the cafeteria and you can't decide what to get*"
+#change scene to a caf
+y "I can't decide what to get guys."
+k "Get pizza dude, it's always the best option."
+y "Yeah but I want something sweet too, and the pizza place hasn't got anything like that."
+s "Go to the donut place and get something!"
+y "I would love to but is it really healthy?"
+s "All I know is they are awesome."
+y "Hmmmm..."
+menu:
+    "Get a Donut":
+        y "Alright I'll get a donut."
+        s "YESSS thinking about them is making me so hungry!"
+        y "Me too, I'll be right back."
+        "*You purchase your favorite donut, which is undoubtedly the best kind, and take a seat next to [s]*"
+        s "Sooo what kind did you get?"
+        y "The best kind."
+        s "What's that?"
+        y "A donut."
+        s "Yes but what KIND?"
+        y "A donut that I will enjoy, that's all."
+        s "IT'S GLAZED I REMEM- Ahem, I recall you saying something about that when [l] asked."
+        y "Heh, yeah I guess I did mention it."
+        jump gotFood
+
+    "Get pizza":
+        y "Okay [k], I'll get some pizza."
+        k "Sweet,  get some toppings dude they always have something good here."
+        y "Maybe, let me see what they have."
+        "*You glance over the display of pies available to purchase, and get a slice of one that looks especially delicious*"
+        "*You go back to the table where everyone is seated and sit next to [k]*"
+        k "That's a good-looking piece of pie."
+        y "It is, but there are other things that look way better."
+        k "Like what?"
+        "*You immediately think of saying something flirty, but in front of everyone it might be embarassing, and you can't help but giggle at the idea*"
+        y "Hehe, take a guess."
+        k "I don't know dude, spill it!"
+        y "No you have to guess!"
+        k "Come on dude, uhhh me?"
+        y "Hell yeah."
+        "*[k] blushes ever so slightly*"
+        k "T-thanks dude, haha."
+        l "Come on I'm eating here!"
+        jump gotFood
+
+
+
+label gotFood:
+    k "Hey I almost forgot, we were going to go golfing tomorrow, do you want to come with us [y]?"
+    y "Yeah that sounds awesome, I wasn't doing anything anyway."
+    k "Cool, it's gonna be at the end of the day, so we will all still be hanging around here for the most part."
+    y "Nice, I always look forward to playing some chess during the day."
+    "*You glance outside and notice how late it has gotten*"
+    y "Crap it's almost dark, I'm gonna head home and get ready for tomorrow."
+    k "See ya dude!"
+    l "Later."
+    t "See ya."
+    s "Bye bye!"
+    "*You exit the school grounds and are on your way home*"
+    "*Thinking about tomorrow you are excited to go out with everyone to golf*"
+    "I should have asked, but I hope its mini golf"
+
+    "*The next day*"
+
+label day4:
+    
+
+
+
+
 
 return
