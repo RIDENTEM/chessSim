@@ -5,17 +5,26 @@ using UnityEngine;
 public class tile : MonoBehaviour
 {
 
-    Collider2D tileCollider;
-     
+    public Collider2D tileCollider;
+    public SpriteRenderer tileColor;
+    public basePiece pieceOnTile = new basePiece();
+
+
+
+    private void Awake()
+    {
+        tileCollider = GetComponent<Collider2D>();
+        tileColor = GetComponent<SpriteRenderer>();
+    }
 
     void onTileClick()
     {
-      //  this.gameObject.GetComponent<Sprite>().texture.
+        //  this.gameObject.GetComponent<Sprite>().texture.
     }
 
     private void OnGUI()
     {
-        
-    } 
+
+    }
 
 }
