@@ -5,7 +5,7 @@ using UnityEngine;
 public class board : MonoBehaviour
 {
 
-    GameObject[,] boardTiles = new GameObject[8, 8];
+   public static GameObject[,] boardTiles = new GameObject[8, 8];
     [SerializeField] GameObject t;
     void generateBoard()
     {
@@ -43,6 +43,8 @@ public class board : MonoBehaviour
                 }
 
                 whereToSpawn = new Vector3(xPos, yPos, 0.0f);
+                t.GetComponent<tile>().pieceOnTile.currentRowPos = i;
+                t.GetComponent<tile>().pieceOnTile.currentColPos = j;
                 boardTiles[i, j] = Instantiate(t, whereToSpawn, Quaternion.identity);
             }
             xPos = -3.0f;
