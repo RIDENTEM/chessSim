@@ -83,7 +83,9 @@ s "[t] and [l], don't let them scare you, they just love giving each other crap 
 t "Yo hurry up and lose already we got people waiting to play."
 "A couple of minutes pass and many moves are made before [t] yells out"
 t "Checkmate bitch!"
+#show ty as a sprite
 l "Barely counted man I was distracted."
+#bring up Lenny as a sprite
 t "Whatever man just shake my damn hand."
 "They shake hands and turn their attention towards me"
 show ty question
