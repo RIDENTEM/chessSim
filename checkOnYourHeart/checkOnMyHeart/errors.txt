@@ -2,9 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/dialogue.rpy", line 20: expected statement.
-    dir_path = '%s\\'
-             ^
+File "game/dialogue.rpy", line 8: expected statement.
+    sNorm = "game/images/sNorm.png"
+          ^
 
-Ren'Py Version: Ren'Py 7.1.1.929
-Thu Nov 29 21:26:45 2018
+File "game/dialogue.rpy", line 10: expected statement.
+    dNorm = "game/images/dNorm.png"
+          ^
+
+File "game/dialogue.rpy", line 12: expected statement.
+    mNorm = "game/images/mNorm.png"
+          ^
+
+File "game/dialogue.rpy", line 14: expected statement.
+    lNorm = "game/images/lNorm.png"
+          ^
+
+File "game/dialogue.rpy", line 17: expected statement.
+    jNorm = "game/images/jNorm.png"
+          ^
+
+Ren'Py Version: Ren'Py 7.3.2.320
+Mon Jul 22 18:48:12 2019

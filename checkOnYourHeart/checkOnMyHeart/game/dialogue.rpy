@@ -5,11 +5,16 @@ $import subprocess
 # name of the character.
 
 define s = Character("Serena", color = "#ffff00")
+image sNorm = "sNorm.png"
 define t = Character("Donovan", color = "#d3d3d3")
+image dNorm = "images/dNorm.png"
 define k = Character("Miki", color = "#000080")
+image mNorm = "images/mNorm.png"
 define l = Character("Leonardo")
+image lNorm = "images/lNorm.png"
 define u = Character("???")
 define c = Character("Juno", color = "#ff0000")
+image jNorm = "images/jNorm.png"
 # The game starts here.
 define sLove = 0
 define tLove = 0
@@ -32,7 +37,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+
 
     # These display lines of dialogue.
 
@@ -45,6 +50,7 @@ label start:
 
 #u "Hey there! Interested in playing some chess?"
 #u "HELLLOOOOOOOO!!"
+show sNorm
 u "Hey there, what's your name?"
 $mainCharacter = renpy.input("What is your name?")
 define y = Character("[mainCharacter]")
@@ -74,18 +80,26 @@ label invite:
 s "You wanna come and play some chess? No boards are free but you can come and watch if you like."
 y "Sure why not, I love chess."
 "I take a seat next to [s] and we both intently watch one of the games going on."
-play music "chessClub.wav"
+
+show eileen concerned at left
+#play music "chessClub.wav"
+
 u "Bro you are doo doo man can't you make a good move?"
+
 u "Yo look who's talking man you're down two pawns!"
 "You lean over and whisper to [s]"
+#try a whisper function here
 y "Who are these two?"
 s "[t] and [l], don't let them scare you, they just love giving each other crap when they play."
 t "Yo hurry up and lose already we got people waiting to play."
 "A couple of minutes pass and many moves are made before [t] yells out"
+show dNorm
 t "Checkmate bitch!"
 #show ty as a sprite
+show lNorm at right
 l "Barely counted man I was distracted."
 #bring up Lenny as a sprite
+
 t "Whatever man just shake my damn hand."
 "They shake hands and turn their attention towards me"
 show ty question
