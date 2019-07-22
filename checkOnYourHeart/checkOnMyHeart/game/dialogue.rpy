@@ -81,8 +81,8 @@ s "You wanna come and play some chess? No boards are free but you can come and w
 y "Sure why not, I love chess."
 "I take a seat next to [s] and we both intently watch one of the games going on."
 
-show eileen concerned at left
-#play music "chessClub.wav"
+show sNorm at left
+play music "chessClub.wav"
 
 u "Bro you are doo doo man can't you make a good move?"
 
@@ -102,8 +102,6 @@ l "Barely counted man I was distracted."
 
 t "Whatever man just shake my damn hand."
 "They shake hands and turn their attention towards me"
-show ty question
-show lenny listening
 
 t "Hey wassup, you enjoy the game?"
 y "Yeah that was a pretty impressive checkmate."

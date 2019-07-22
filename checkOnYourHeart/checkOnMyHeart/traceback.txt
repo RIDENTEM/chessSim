@@ -63,4 +63,4 @@ IOError: Couldn't find file 'sNorm.png'.
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 checkOnMyHeart 1.0
-Mon Jul 22 18:59:11 2019
+Mon Jul 22 19:04:39 2019
