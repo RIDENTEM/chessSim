@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/dialogue.rpy", line 57: expected statement.
-    repeat
-          ^
+File "game/dialogue.rpy", line 59: expected statement.
+    renpy.say("This")
+                     ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Mon Jul 22 22:25:52 2019
+Tue Jul 23 17:38:29 2019

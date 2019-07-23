@@ -4,6 +4,10 @@ init python:
     def _shout(str):
         ret = str.upper()
         return ret
+    def _whisper(str):
+        ret = str.lower()
+        #ret = "{size =-40}[ret]{/size}"
+        return ret
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -49,13 +53,12 @@ label start:
     "There are also chess boards between the people, it must be a chess club or something"
     "A perky seemingly young girl approaches me as I approach the tables"
 
-#show s happy
-
 #u "Hey there! Interested in playing some chess?"
 #u "HELLLOOOOOOOO!!"
 show sNorm with easeinleft
 u "Hey there, what's your name?"
 $mainCharacter = renpy.input("What is your name?")
+
 define y = Character("[mainCharacter]")
 
 s "Nice to meet you [y], I'm [s]. I love your shoes by the way!"
@@ -92,7 +95,7 @@ u "Bro you are doo doo man can't you make a good move?"
 u "Yo look who's talking man you're down two pawns!"
 "You lean over and whisper to [s]"
 #try a whisper function here
-y "Who are these two?"
+$renpy.say(y, _whisper("Who are these two?"))
 s "[t] and [l], don't let them scare you, they just love giving each other crap when they play."
 t "Yo hurry up and lose already we got people waiting to play."
 "A couple of minutes pass and many moves are made before [t] yells out"
@@ -122,7 +125,7 @@ t "Anyway sorry about that, uhh."
 s "[y]!"
 t "Right, [y], good to meet you."
 t "Oh, and welcome to the chess club."
-s "Yayy new member!"
+$renpy.say(s,_shout( "Yayy new member!"))
 y "Well thanks, I'm happy to be a part of it, but don't I have to play chess to be in the club?"
 t "Actually yeah, after all this is the chess club, not the loiterers club."
 y "Damn, well after that display I'm not sure how good I would do."
