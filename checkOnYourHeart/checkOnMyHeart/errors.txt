@@ -2,25 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/dialogue.rpy", line 8: expected statement.
-    sNorm = "game/images/sNorm.png"
-          ^
-
-File "game/dialogue.rpy", line 10: expected statement.
-    dNorm = "game/images/dNorm.png"
-          ^
-
-File "game/dialogue.rpy", line 12: expected statement.
-    mNorm = "game/images/mNorm.png"
-          ^
-
-File "game/dialogue.rpy", line 14: expected statement.
-    lNorm = "game/images/lNorm.png"
-          ^
-
-File "game/dialogue.rpy", line 17: expected statement.
-    jNorm = "game/images/jNorm.png"
+File "game/dialogue.rpy", line 57: expected statement.
+    repeat
           ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Mon Jul 22 18:48:12 2019
+Mon Jul 22 22:25:52 2019

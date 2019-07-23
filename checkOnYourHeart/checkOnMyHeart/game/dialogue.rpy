@@ -1,6 +1,9 @@
 ﻿# The script of the game goes in this file.
 $import subprocess
-
+init python:
+    def _shout(str):
+        ret = str.upper()
+        return ret
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -50,7 +53,7 @@ label start:
 
 #u "Hey there! Interested in playing some chess?"
 #u "HELLLOOOOOOOO!!"
-show sNorm
+show sNorm with easeinleft
 u "Hey there, what's your name?"
 $mainCharacter = renpy.input("What is your name?")
 define y = Character("[mainCharacter]")
@@ -94,6 +97,7 @@ s "[t] and [l], don't let them scare you, they just love giving each other crap 
 t "Yo hurry up and lose already we got people waiting to play."
 "A couple of minutes pass and many moves are made before [t] yells out"
 show dNorm
+#$tCheck = _shout("Checkmate bitch!")
 t "Checkmate bitch!"
 #show ty as a sprite
 show lNorm at right
@@ -111,6 +115,7 @@ l "Yeah, yeah."
 l "I gotta go study so I'll see you all later."
 t "See ya."
 s "Bye [l]!"
+hide lNorm with easeoutright
 y "He seems nice."
 t "Only when he's winning."
 t "Anyway sorry about that, uhh."
@@ -123,11 +128,12 @@ t "Actually yeah, after all this is the chess club, not the loiterers club."
 y "Damn, well after that display I'm not sure how good I would do."
 t "It's alright, everyone here sucks their fair share of ass."
 t "Start off against [s], she will give you a good game-"
-s "Aww thanks!"
+s "{cps=*2}Aww thanks!{/cps}"
+
 t "- In determining how good you are."
-s "What is that supposed to mean??"
+s "{cps=*2}What is that supposed to mean??{/cps}"
 t "It means that if you get beat I'll have a pretty good idea of the skill level of our new friend here."
-s "Oh yeah?? Well I'm gonna win you'll see!"
+s "{cps=*2}Oh yeah?? Well I'm gonna win you'll see!{/cps}"
 y "Hold on, I have to play a game right now?"
 t "Yep, good luck"
 s "Hope you're ready! <3"
@@ -291,7 +297,7 @@ label tFlirt:
 
 label day3:
 "Day 3"
-"I arrive at school yet again, excited to see all the people in the chess club once again."
+"I arrive at school, excited to see all the people in the chess club once again."
 "As I approach the tables [t], [s], and [l] are at the tables along with someone you have not seen yet."
 "[s], as she usually does, greets me with unbridled enthusiasm."
 play music "chessClub.wav"
